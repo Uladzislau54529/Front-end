@@ -1,0 +1,155 @@
+/* ===== Общие карточки ===== */
+.weather-container,
+.favorite-block,
+.forecast-card,
+.weather-forecast-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(16px);
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.weather-container:hover,
+.favorite-block:hover,
+.forecast-card:hover,
+.weather-forecast-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 45px rgba(0, 0, 0, 0.65);
+}
+
+/* ===== Заголовки ===== */
+h2 {
+    font-size: 2rem;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+    color: #7db6ff;
+    margin-bottom: 0.5rem;
+}
+
+h4 {
+    font-size: 1.1rem;
+    color: #9dbbff;
+}
+
+/* ===== Текст ===== */
+.weather-current p,
+.favorite-current p,
+.forecast-card p,
+.weather-forecast-card p {
+    font-size: 0.95rem;
+    margin: 0.35rem 0;
+    color: #ddd;
+}
+
+strong {
+    color: #ffffff;
+}
+
+/* ===== Кнопки ===== */
+button {
+    background: linear-gradient(135deg, #3a86ff, #6c5ce7);
+    color: white;
+    border-radius: 12px;
+    font-weight: 600;
+    padding: 0.7rem 1.4rem;
+    box-shadow: 0 6px 20px rgba(58, 134, 255, 0.45);
+    transition: all 0.25s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #4ea0ff, #8a7bff);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(100, 150, 255, 0.6);
+}
+
+/* ===== Поиск ===== */
+.weather-search {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* ===== Weather ===== */
+.weather-current {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.weather-forecast-title {
+    text-align: center;
+    margin: 2rem 0 1rem;
+    color: #cddcff;
+}
+
+/* ===== Прогноз ===== */
+.weather-forecast,
+.forecast-cards {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 1rem;
+}
+
+.forecast-card,
+.weather-forecast-card {
+    min-width: 180px;
+    scroll-snap-align: start;
+    text-align: center;
+}
+
+.forecast-card img,
+.weather-forecast-card img {
+    width: 80px;
+    height: 80px;
+    margin: 0.5rem 0;
+}
+
+/* ===== Favorites ===== */
+.favorite {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.favorite-block {
+    width: 100%;
+}
+
+.favorite-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.favorite-current {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+/* ===== Навигация карточек ===== */
+nav a {
+    background: linear-gradient(135deg, rgba(100,150,255,0.25), rgba(120,90,255,0.25));
+    color: white;
+}
+
+nav a:hover {
+    background: linear-gradient(135deg, rgba(120,180,255,0.45), rgba(150,120,255,0.45));
+}
